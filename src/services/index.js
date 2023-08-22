@@ -73,11 +73,113 @@ class Database {
         rate: 4.5,
         hosted: "george",
         type: "history",
-        latitude: 47.4867446,
-        longitude: 19.0480283,
+        latitude: 40.689247,
+        longitude: -74.044502,
       },
       {
         id: 4,
+        name: "Gunung Kerinci",
+        desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
+        price: 3000,
+        mainImage: 7,
+        subImage: 8,
+        locationId: 1,
+        maxAdults: 5,
+        maxChildren: 5,
+        maxInfants: 5,
+        rate: 4.9,
+        hosted: "yazid",
+        type: "nature",
+        latitude: -1.6971814,
+        longitude: 101.2646538,
+      },
+      {
+        id: 5,
+        name: "Gunung Kerinci",
+        desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
+        price: 3000,
+        mainImage: 7,
+        subImage: 8,
+        locationId: 1,
+        maxAdults: 5,
+        maxChildren: 5,
+        maxInfants: 5,
+        rate: 4.9,
+        hosted: "yazid",
+        type: "nature",
+        latitude: -1.6971814,
+        longitude: 101.2646538,
+      },
+      {
+        id: 6,
+        name: "Gunung Kerinci",
+        desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
+        price: 3000,
+        mainImage: 7,
+        subImage: 8,
+        locationId: 1,
+        maxAdults: 5,
+        maxChildren: 5,
+        maxInfants: 5,
+        rate: 4.9,
+        hosted: "yazid",
+        type: "nature",
+        latitude: -1.6971814,
+        longitude: 101.2646538,
+      },
+      {
+        id: 7,
+        name: "Gunung Kerinci",
+        desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
+        price: 3000,
+        mainImage: 7,
+        subImage: 8,
+        locationId: 1,
+        maxAdults: 5,
+        maxChildren: 5,
+        maxInfants: 5,
+        rate: 4.9,
+        hosted: "yazid",
+        type: "nature",
+        latitude: -1.6971814,
+        longitude: 101.2646538,
+      },
+      {
+        id: 8,
+        name: "Gunung Kerinci",
+        desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
+        price: 3000,
+        mainImage: 7,
+        subImage: 8,
+        locationId: 1,
+        maxAdults: 5,
+        maxChildren: 5,
+        maxInfants: 5,
+        rate: 4.9,
+        hosted: "yazid",
+        type: "nature",
+        latitude: -1.6971814,
+        longitude: 101.2646538,
+      },
+      {
+        id: 9,
+        name: "Gunung Kerinci",
+        desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
+        price: 3000,
+        mainImage: 7,
+        subImage: 8,
+        locationId: 1,
+        maxAdults: 5,
+        maxChildren: 5,
+        maxInfants: 5,
+        rate: 4.9,
+        hosted: "yazid",
+        type: "nature",
+        latitude: -1.6971814,
+        longitude: 101.2646538,
+      },
+      {
+        id: 10,
         name: "Gunung Kerinci",
         desc: "The hotel offers newspapers, conference rooms, and a restaurant on-site. It also has elegant, spacious bedrooms, each with comfortable seating areas, a television, air conditioning, a room safe, and a large desk, all designed for you to enjoy a perfect rest",
         price: 3000,
@@ -126,42 +228,40 @@ class Database {
       {
         id: 1,
         imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhiBSFTe3YTRV7m375fncDSIBpAJecq6W6QHEX-8qy77SoURaU_hWRul4X_pFW9VHD0cU&usqp=CAU",
       },
       {
         id: 2,
         imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/370564672.jpg?k=4f37af06c05a6f5dfc7db5e8e71d2eb66cae6eec36af7a4a4cd7a25d65ceb941&o=&hp=1",
       },
       {
         id: 3,
         imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt33PhNJKqCGXc_4M_-Bl-j2W8bIYZqFv1Cr6YlHeLZW0DuOt5d8KZ4zRBDaDK7cC9K8A&usqp=CAU",
       },
       {
         id: 4,
-        imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+        imagePath: "https://newimg.otpusk.com/3/800x600/00/00/34/27/342762.jpg",
       },
       {
         id: 5,
         imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROzAmsDHDhS5AdG_rJGhJOO2qcMQsBDjmECiKcxsdyLxH-TJ8p435Wr2eTtqJ_Pv1-zUY&usqp=CAU",
       },
       {
         id: 6,
-        imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+        imagePath: "https://newimg.otpusk.com/3/800x600/00/00/34/27/342762.jpg",
       },
       {
         id: 7,
         imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAhB04mD-fv7DcE1Lkg6NFyIaErdhRAEjzjknbEEqPKUP40Br__E8_2djgcrugkD3T4E&usqp=CAU",
       },
       {
         id: 8,
         imagePath:
-          "https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/hotel-murah-bekasi-100-ribu.width-800.format-webp.webp",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaWBCJtVZK7PZ7BVZEJElwApLHkL6pNUlEGnSyeqVQ5peM7v4zoC4nvKcoJciz5jnFDz4&usqp=CAU",
       },
     ];
   }
@@ -212,6 +312,40 @@ class Database {
             experience.orders = this.countExperienceOrders(experience.id);
             availableExperiences.push(experience);
           }
+        }
+      })
+    );
+
+    return availableExperiences;
+  }
+  async searchAllExperiences() {
+    const availableExperiences = [];
+
+    await Promise.all(
+      this.experiences.map(async (experience) => {
+        const existingOrders = this.orders.filter(
+          (order) => order.experienceId === experience.id
+        );
+        const remainingAdults =
+          experience.maxAdults -
+          existingOrders.reduce((total, order) => total + order.adults, 0);
+        const remainingChildren =
+          experience.maxChildren -
+          existingOrders.reduce((total, order) => total + order.children, 0);
+        const remainingInfants =
+          experience.maxInfants -
+          existingOrders.reduce((total, order) => total + order.infants, 0);
+        if (
+          remainingAdults >= adults &&
+          remainingChildren >= children &&
+          remainingInfants >= infants
+        ) {
+          experience.mainImage = await this.searchImages(experience.mainImage);
+          experience.subImage = await this.searchImages(experience.subImage);
+          experience.allImage = [experience.mainImage, experience.subImage];
+
+          experience.orders = this.countExperienceOrders(experience.id);
+          availableExperiences.push(experience);
         }
       })
     );

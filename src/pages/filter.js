@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../App.css";
+import Navbar from "../components/navbar";
 function Filter() {
   const navigate = useNavigate();
   const [locationState, setLocationState] = useState({});
@@ -104,95 +105,91 @@ function Filter() {
       alert("Please fill in all required fields before searching.");
       return;
     }
-    movePage("list");
+    movePage("/listfilter");
   };
   return (
-    <div className="main-container">
-      <div className="header">
-        <span className="back-icon">&lt;</span>
-        <div className="title">
-          <span className="gray-text">Stay</span>
-          <span className="black-text">Experiences</span>
+    <>
+      <Navbar />
+      <div className="main-container" style={{ marginTop: "10vh" }}>
+        <div className="container" onClick={() => movePage("/location")}>
+          <div className="text-section">
+            <p className="gray-text2">Where</p>
+            {locationState.name ? (
+              <p className="black-text2">{locationState.name}</p>
+            ) : (
+              <p className="black-text2">Choose Destination</p>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="container" onClick={() => movePage("location")}>
-        <div className="text-section">
-          <p className="gray-text2">Where</p>
-          {locationState.name ? (
-            <p className="black-text2">{locationState.name}</p>
-          ) : (
-            <p className="black-text2">Choose Destination</p>
+        <div className="container">
+          <div className="text-section">
+            <p className="gray-text2">When</p>
+            <div className="datepicker-container">
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => pickDate(date)}
+                className="date-picker"
+                placeholderText="Select date"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className={`container ${expanded ? "expanded" : ""}`}
+          onClick={toggleExpansion}
+        >
+          <div className="text-section">
+            <p className="gray-text2">Who</p>
+            <p className="black-text2">Fill how many</p>
+          </div>
+          {expanded && (
+            <div className="input-section" onClick={stopPropagation}>
+              <div className="input-row">
+                <div className="input-label">
+                  <p className="input-title">Adults</p>
+                  <p className="input-subtitle">Ages 13 or above</p>
+                </div>
+                <div className="input-controls">
+                  <button onClick={() => decrementCount("adults")}>-</button>
+                  <p>{adults}</p>
+                  <button onClick={() => incrementCount("adults")}>+</button>
+                </div>
+              </div>
+              <div className="input-row">
+                <div className="input-label">
+                  <p className="input-title">Children</p>
+                  <p className="input-subtitle">Ages 2 - 12</p>
+                </div>
+                <div className="input-controls">
+                  <button onClick={() => decrementCount("children")}>-</button>
+                  <p>{children}</p>
+                  <button onClick={() => incrementCount("children")}>+</button>
+                </div>
+              </div>
+              <div className="input-row">
+                <div className="input-label">
+                  <p className="input-title">Infants</p>
+                  <p className="input-subtitle">Under 2</p>
+                </div>
+                <div className="input-controls">
+                  <button onClick={() => decrementCount("infants")}>-</button>
+                  <p>{infants}</p>
+                  <button onClick={() => incrementCount("infants")}>+</button>
+                </div>
+              </div>
+            </div>
           )}
         </div>
-      </div>
-      <div className="container">
-        <div className="text-section">
-          <p className="gray-text2">When</p>
-          <div className="datepicker-container">
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => pickDate(date)}
-              className="date-picker"
-              placeholderText="Select date"
-            />
-          </div>
+        <div className="search-button-container">
+          <span className="clear-all-text" onClick={clearAll}>
+            Clear All
+          </span>
+          <button className="search-button" onClick={searchExperiences}>
+            Search
+          </button>
         </div>
       </div>
-      <div
-        className={`container ${expanded ? "expanded" : ""}`}
-        onClick={toggleExpansion}
-      >
-        <div className="text-section">
-          <p className="gray-text2">Who</p>
-          <p className="black-text2">Fill how many</p>
-        </div>
-        {expanded && (
-          <div className="input-section" onClick={stopPropagation}>
-            <div className="input-row">
-              <div className="input-label">
-                <p className="input-title">Adults</p>
-                <p className="input-subtitle">Ages 13 or above</p>
-              </div>
-              <div className="input-controls">
-                <button onClick={() => decrementCount("adults")}>-</button>
-                <p>{adults}</p>
-                <button onClick={() => incrementCount("adults")}>+</button>
-              </div>
-            </div>
-            <div className="input-row">
-              <div className="input-label">
-                <p className="input-title">Children</p>
-                <p className="input-subtitle">Ages 2 - 12</p>
-              </div>
-              <div className="input-controls">
-                <button onClick={() => decrementCount("children")}>-</button>
-                <p>{children}</p>
-                <button onClick={() => incrementCount("children")}>+</button>
-              </div>
-            </div>
-            <div className="input-row">
-              <div className="input-label">
-                <p className="input-title">Infants</p>
-                <p className="input-subtitle">Under 2</p>
-              </div>
-              <div className="input-controls">
-                <button onClick={() => decrementCount("infants")}>-</button>
-                <p>{infants}</p>
-                <button onClick={() => incrementCount("infants")}>+</button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-      <div className="search-button-container">
-        <span className="clear-all-text" onClick={clearAll}>
-          Clear All
-        </span>
-        <button className="search-button" onClick={searchExperiences}>
-          Search
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 

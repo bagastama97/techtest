@@ -4,16 +4,28 @@ import Database from "../services";
 import SNavbar from "../components/navbar";
 import NavbarIcon from "../components/iconNavbar";
 import Other from "../components/other";
-function ListPage() {
+function ListFilter() {
   const navigate = useNavigate();
   const db = new Database();
+  const storedLocationState = JSON.parse(localStorage.getItem("locationState"));
+  const storedDateState = new Date(localStorage.getItem("dateState"));
+  const storedWhoState = JSON.parse(localStorage.getItem("whoState"));
+  const day = String(storedDateState.getDate()).padStart(2, "0");
+  const month = String(storedDateState.getMonth() + 1).padStart(2, "0");
+  const year = storedDateState.getFullYear();
+  const formattedDate = `${month}/${day}/${year}`;
   const [results, setResults] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await db.searchAllExperiences();
+        const data = await db.searchExperiences(
+          storedLocationState.id,
+          formattedDate,
+          storedWhoState.adults,
+          storedWhoState.children,
+          storedWhoState.infants
+        );
         setResults(data);
-        console.log(data, "<<<<<<<<<<<<<<<<");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -81,4 +93,4 @@ function ListPage() {
   );
 }
 
-export default ListPage;
+export default ListFilter;
